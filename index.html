@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=320,
+      height=480,
+      initial-scale=1.0,
+      minimum-scale=1.0,
+      maximum-scale=2.0,
+      user-scalable=yes"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link href="index.css" rel="stylesheet" />
+    <script src="index.js" defer></script>
+    <title>monster-strike-tool</title>
+  </head>
+  <body>
+  <h1>monster-strike-tool</h1>
+  <div class="contents">
+    
+    <div class="left-menu box">ダメージ計算シミュレーター</div>
+    <div class="ex-data box">
+
+      <div class="menu" id="save">
+        <nav>
+          <ul id="save-container">
+            <li class="save-list"><span id="save-text">Data : </span></li>
+            <li class="save-list"><a id="btn-save-1">data-1</a></li>
+            <li class="save-list"><a id="btn-save-2">data-2</a></li>
+            <li class="save-list"><a id="btn-save-3">data-3</a></li>
+            <li class="save-list"><a id="btn-save-4">data-4</a></li>
+            <li class="save-list"><a id="btn-save-5">data-5</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      
+      <div id="info">
+        <div class="data-time">
+          DATA<span id="now-data">1</span>:<span id="data-title"></span>
+          <span id="span-last-date">&ensp;<span id="last-date"></span></span>
+        </div>
+        <table cellspacing="12" id="info-table">
+          <tr class="center">
+            <td class="td-info">
+              <span class="info-text">ハマり</span>
+              <span id="stuck" class="info-num">&ensp;&ensp;0</span>
+            </td>
+            <td class="td-info">
+              <span class="info-text">ラック</span>
+              <span id="luck" class="info-num">&ensp;&ensp;0</span>
+            </td>
+          </tr>
+          <tr class="center">
+            <td class="td-info">
+              <span class="info-text">遭遇数</span>
+              <span id="encount" class="info-num">&ensp;&ensp;0</span>
+            </td>
+            <td class="td-info">
+              <span class="info-text">遭遇率</span>
+              <span id="rate" class="info-num">&ensp;0.00</span>%
+            </td>
+          </tr>
+          <tr class="center">
+            <td colspan="2" class="td-info">
+              <span class="info-text">最小/最大ハマり</span>
+              <span class="info-num">
+                <span id="min">&ensp;&ensp;0</span>/<span id="max"
+                  >&ensp;&ensp;&ensp;0</span
+                ></span
+              >
+            </td>
+          </tr>
+          <tr class="center">
+            <td colspan="2" class="td-info">
+              <span class="info-text">総周回数</span>
+              <span id="total" class="info-num">&ensp;&ensp;&ensp;&ensp;0</span>
+            </td>
+          </tr>
+          <tr class="center">
+            <td colspan="2" class="td-info">
+              <span class="info-text-sub">EX敗北数</span>
+              <span id="exlose" class="info-num-sub"
+                >&ensp;&ensp;&ensp;&ensp;0</span
+              >
+            </td>
+          </tr>
+          <tr class="center" id="treasure">
+            <td class="td-info">
+              <span class="info-text-sub">至宝発動数</span>
+              <span id="treasure-num" class="info-num-sub">&ensp;&ensp;0</span>
+            </td>
+            <td class="td-info">
+              <span class="info-text-sub">至宝発動率</span>
+              <span id="treasure-rate" class="info-num-sub">&ensp;0.00</span>%
+            </td>
+          </tr>
+          <tr class="center" id="luckres">
+            <td class="td-info">
+              <span class="info-text-sub">ラキリザ数</span>
+              <span id="luckres-num" class="info-num-sub">&ensp;&ensp;0</span>
+            </td>
+            <td class="td-info">
+              <span class="info-text-sub">ラキリザ率</span>
+              <span id="luckres-rate" class="info-num-sub">&ensp;0.00</span>%
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="precise-calc">
+        <button id="btn-treasure-calc">これまでの至宝発動数を計算する</button>
+      </div>
+      
+  <!-- ボタン -->
+      <div id="btn">
+        <table>
+          <tr>
+            <td><button class="btn-main custom-btn btn-2" id="btn-lap">周回</button></td>
+            <td><button class="btn-main custom-btn btn-2" id="btn-encount">遭遇</button></td>
+          </tr>
+        </table>
+
+        <br />
+        <input id="zerohamari-mode" type="checkbox" />
+        <label for="zerohamari-mode">0ハマり表記にする</label>
+        <br />
+        <input id="kinki-mode" type="checkbox" />
+        <label for="kinki-mode">禁忌EXモードにする</label>
+
+        <table id="tbl-sub">
+          <tr>
+            <td><a class="btn-sub" id="btn-edit">編集</a></td>
+            <td><a class="btn-sub" id="btn-reset">リセット</a></td>
+          </tr>
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+  </body>
+</html>

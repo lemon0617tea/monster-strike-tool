@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/* div{
+  border: solid ;
+} */
+body {
+  background-color: rgb(236, 236, 236);
+}
+@font-face {
+  font-family: "Reggae";
+  src: url("font/subset-ReggaeOne-Regular.ttf") format("truetype");
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.contents{
+  display: flex;
+  justify-content: space-around;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .contents{
+    display: block;
+    
+    width: 100%;
+  }
+}
+
+.box{
+  box-shadow: 10px 5px 5px #333;
+  margin: 20px;
+  padding: 10px;
+  background-color: white;
+  width: 100%;
+}
+
+
+.left-menu {
+  width: 100%;
+}
+
+
+
+.menu nav{
+  text-align: center;
+  border-top: solid;
+  }
+  .menu nav ul{
+  margin: 0 ;
+  padding: 5px 0px;
+  display: flex;
+  }
+  .menu nav ul li{
+  list-style: none;
+  display: inline-block;
+  width: 15%;
+  min-width: 90px;
+  }
+  .menu nav ul li a{
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  width: 100%;
+  }
+  .menu nav ul li.current a{
+  color: #F33135;
+  }
+  .menu nav ul li a:hover{
+  color: #f89705;
+  }
+  .data-time {
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+  }
+
+  /* 2 */
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    margin: 5px 10px;
+  }
+.btn-2:after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 6px;
+  width: 90%;
+  height: 70%;
+  border: 1px solid #000;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.btn-2:hover:after {
+  opacity: 1;
+}
+
+#tbl-sub {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: solid ;
+}
+#tbl-sub .btn-sub {
+  cursor: pointer;
+  display: inline-block;
+    width: 15%;
+    min-width: 70px;
+    margin: 5px 10px;
+}
+#tbl-sub tr {
+  text-align: center;
+}
+#tbl-sub #btn-edit:hover{
+  color: #1d05f8;
+  }
+  #tbl-sub #btn-reset:hover{
+    color: #f80505;
+    }
